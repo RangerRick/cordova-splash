@@ -18,7 +18,7 @@ var getPlatforms = function (projectName) {
         name : 'ios',
         // TODO: use async fs.exists
         isAdded : fs.existsSync('platforms/ios'),
-        splashPath : 'platforms/ios/' + projectName + '/Resources/splash/',
+        splashPath : 'resources/ios/splash/',
         splash : [
             { name : 'Default-568h@2x~iphone.png',    width : 640,  height : 1136 },
             { name : 'Default-Landscape@2x~ipad.png', width : 2048, height : 1536 },
@@ -27,18 +27,25 @@ var getPlatforms = function (projectName) {
             { name : 'Default-Portrait~ipad.png',     width : 768,  height : 1024 },
             { name : 'Default@2x~iphone.png',         width : 640,  height : 960 },
             { name : 'Default~iphone.png',            width : 320,  height : 480 },
+            { name : 'Default-667h@2x~iphone.png',    width : 750,  height : 1334 },
+            { name : 'Default-736h@3x~iphone.png',    width : 1242, height : 2208 },
+            { name : 'Default-Landscape-736h@3x~iphone.png', width : 2208, height : 1242 },
         ]
     });
     platforms.push({
         name : 'android',
         isAdded : fs.existsSync('platforms/android'),
-        splashPath : 'platforms/android/res/',
+        splashPath : 'resources/android/',
         splash : [
             { name : 'drawable/screen.png',       width : 480, height: 640 },
             { name : 'drawable-hdpi/screen.png',  width : 320, height: 426 },
             { name : 'drawable-ldpi/screen.png',  width : 320, height: 470 },
             { name : 'drawable-mdpi/screen.png',  width : 480, height: 640 },
             { name : 'drawable-xhdpi/screen.png', width : 720, height: 960 },
+            { name : 'drawable-port-hdpi/screen.png', width : 480, height: 800 },
+            { name : 'drawable-port-ldpi/screen.png', width : 200, height: 320 },
+            { name : 'drawable-port-mdpi/screen.png', width : 320, height: 480 },
+            { name : 'drawable-port-xhdpi/screen.png', width : 720, height: 1280 },
         ]
     });
     // TODO: add all platforms
