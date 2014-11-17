@@ -18,7 +18,7 @@ var getPlatforms = function (projectName) {
         name : 'ios',
         // TODO: use async fs.exists
         isAdded : fs.existsSync('platforms/ios'),
-        splashPath : 'resources/ios/splash/',
+        splashPath : 'platforms/ios/' + projectName + '/Resources/splash/',
         splash : [
             { name : 'Default-568h@2x~iphone.png',    width : 640,  height : 1136 },
             { name : 'Default-Landscape@2x~ipad.png', width : 2048, height : 1536 },
@@ -35,13 +35,17 @@ var getPlatforms = function (projectName) {
     platforms.push({
         name : 'android',
         isAdded : fs.existsSync('platforms/android'),
-        splashPath : 'resources/android/',
+        splashPath : 'platforms/android/res/',
         splash : [
             { name : 'drawable/screen.png',       width : 480, height: 640 },
             { name : 'drawable-hdpi/screen.png',  width : 320, height: 426 },
             { name : 'drawable-ldpi/screen.png',  width : 320, height: 470 },
             { name : 'drawable-mdpi/screen.png',  width : 480, height: 640 },
             { name : 'drawable-xhdpi/screen.png', width : 720, height: 960 },
+            { name : 'drawable-land-hdpi/screen.png', width : 800, height: 480 },
+            { name : 'drawable-land-ldpi/screen.png', width : 320, height: 200 },
+            { name : 'drawable-land-mdpi/screen.png', width : 480, height: 320 },
+            { name : 'drawable-land-xhdpi/screen.png', width : 1280, height: 720 },
             { name : 'drawable-port-hdpi/screen.png', width : 480, height: 800 },
             { name : 'drawable-port-ldpi/screen.png', width : 200, height: 320 },
             { name : 'drawable-port-mdpi/screen.png', width : 320, height: 480 },
