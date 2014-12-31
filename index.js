@@ -1,4 +1,5 @@
 var fs     = require('fs');
+var path   = require('path');
 var xml2js = require('xml2js');
 var ig     = require('imagemagick');
 var colors = require('colors');
@@ -117,9 +118,14 @@ var getProjectName = function () {
  */
 var generateSplash = function (platform, splash) {
     var deferred = Q.defer();
+    var dstFile = platform.splashPath + splash.name;
+    var dstDir = path.dirname(dstFile);
+    if (!fs.existsSync(dstDir)) {
+        fs.mkdirSync(dstDir);
+    }
     ig.crop({
         srcPath: settings.SPLASH_FILE,
-        dstPath: platform.splashPath + splash.name,
+        dstPath: dstFile,
         quality: 1,
         format: 'png',
         width: splash.width,
