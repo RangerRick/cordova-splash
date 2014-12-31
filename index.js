@@ -46,10 +46,11 @@ var getPlatforms = function (projectName) {
             { name : 'drawable-land-ldpi/screen.png', width : 320, height: 200 },
             { name : 'drawable-land-mdpi/screen.png', width : 480, height: 320 },
             { name : 'drawable-land-xhdpi/screen.png', width : 1280, height: 720 },
+            { name : 'drawable-land-xxhdpi/screen.png', width : 1920, height: 1080 },
             { name : 'drawable-port-hdpi/screen.png', width : 480, height: 800 },
             { name : 'drawable-port-ldpi/screen.png', width : 200, height: 320 },
             { name : 'drawable-port-mdpi/screen.png', width : 320, height: 480 },
-            { name : 'drawable-port-xhdpi/screen.png', width : 720, height: 1280 },
+            { name : 'drawable-port-xhdpi/screen.png', width : 1080, height: 1920 },
         ]
     });
     // TODO: add all platforms
